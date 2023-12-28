@@ -1,0 +1,43 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import HeaderLink from '../components/HeaderLink.astro';
+import ImageEduar from '../../public/eduar.jpg'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<div class="container max-w-5xl mx-auto mt-8">
+				<div class="flex justify-between">
+					<div class="w-[66%] pr-32">
+						<h1 class="text-white font-semibold text-6xl font-roboto mb-5">Software <br> Engineer</h1>
+						<div>
+							<p class="font-ibm font-medium text-white mb-4">Hi, I'm Eduar Apaza, a software engineer and lego builder. I run a developers group, CODEX, based out of Tacna, Peru.</p>						
+							<p class="font-ibm font-medium text-white mb-4">I've had the pleasure to work in projects for companies such as Capital One , Coinstar, iZotope, Microsoft, spectrum, refinitv, Thomson Reuters, PWC and many others.</p>
+							<p class="font-ibm font-medium text-white mb-4">Currently I am working full time as Senior Software Engineer for exabeam in San Mateo, California.</p>
+							<p class="font-ibm font-medium text-white mb-4">We can work together, just shot me an email.</p>
+						</div>
+						<div class="mt-8">
+							<HeaderLink class="text-white bg-green-600 font-roboto font-normal px-4 py-2 rounded" href="/blog">Check out my blog</HeaderLink>
+						</div>
+					</div>
+					<div class="w-[33%]">
+						<div class="relative">
+							<img class="relative z-20" src={ImageEduar.src} alt="">
+							<div class="z-10 absolute bottom-0 right-0 left-0 top-0 translate-x-[40px] translate-y-[35px] bg-[length:20px_20px] bg-[radial-gradient(white_1px,transparent_0)]"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
